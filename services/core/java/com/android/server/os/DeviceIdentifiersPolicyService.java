@@ -74,10 +74,10 @@ public final class DeviceIdentifiersPolicyService extends SystemService {
                                 + Binder.getCallingUid());
             }
 
-            if (!TelephonyPermissions.checkCallingOrSelfReadDeviceIdentifiers(mContext,
-                    callingPackage, callingFeatureId, "getSerial")) {
-                return Build.UNKNOWN;
-            }
+            //if (!TelephonyPermissions.checkCallingOrSelfReadDeviceIdentifiers(mContext,
+            //        callingPackage, callingFeatureId, "getSerial")) {
+            //    return Build.UNKNOWN;
+            //}
             return SystemProperties.get("ro.serialno", Build.UNKNOWN);
         }
 
