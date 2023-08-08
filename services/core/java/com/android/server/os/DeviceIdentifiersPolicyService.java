@@ -68,11 +68,11 @@ public final class DeviceIdentifiersPolicyService extends SystemService {
         @Override
         public @Nullable String getSerialForPackage(String callingPackage,
                 String callingFeatureId) throws RemoteException {
-            if (!checkPackageBelongsToCaller(callingPackage)) {
-                throw new IllegalArgumentException(
-                        "Invalid callingPackage or callingPackage does not belong to caller's uid:"
-                                + Binder.getCallingUid());
-            }
+            //if (!checkPackageBelongsToCaller(callingPackage)) {
+            //    throw new IllegalArgumentException(
+            //            "Invalid callingPackage or callingPackage does not belong to caller's uid:"
+            //                    + Binder.getCallingUid());
+            //}
 
             //if (!TelephonyPermissions.checkCallingOrSelfReadDeviceIdentifiers(mContext,
             //        callingPackage, callingFeatureId, "getSerial")) {
